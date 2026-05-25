@@ -1,26 +1,54 @@
-# Help for the Elderly
-Find and rate services for the elderly
+# Service Finder (React + Firebase Auth)
 
-A modern web application built with **React JS** and powered by **Firebase** to support and care for the elderly.
+This scaffold provides a minimal React frontend (Vite) with Firebase Authentication supporting OAuth (Google) and passwordless Email Link sign-in.
 
-## 🚀 Tech Stack
+## What you get
 
-* **Frontend:** React JS
-* **Backend & Database:** Firebase (Authentication, Firestore/Realtime Database)
-* **Version Control:** GitHub
+- Vite + React app
+- Firebase modular SDK (v9+) initialization
+- OAuth (Google) sign-in flow
+- Passwordless Email Link sign-in (send & complete)
+- Example `.env` values and setup instructions
 
 ---
 
-## 🛠️ Getting Started
+## Prerequisites
 
-Follow these steps to set up the project locally.
+- Node.js 18+ (or current LTS)
+- A Firebase project with Authentication enabled (Google provider and Email Link)
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+## Setup
 
-### Installation & Local Setup
+1. Install dependencies:
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/choohy/Service-Finder.git](https://github.com/choohy/Service-Finder.git)
-   cd help-the-elderly
+```bash
+npm install
+```
+
+2. Create a Firebase project and enable Authentication > Sign-in methods:
+
+- Google
+- Email/Passwordless (Email link)
+
+3. Copy `.env.example` to `.env` and fill in your Firebase config values.
+
+4. Run the dev server:
+
+```bash
+npm run dev
+```
+
+The app will open at `http://localhost:5173` by default.
+
+---
+
+## Files added
+
+- `index.html`, `vite.config.js` — Vite app boot
+- `src/firebase.js` — Firebase initialization and helpers
+- `src/Auth.jsx` — Simple auth UI (Google + Email link)
+- `.env.example` — env template
+
+---
+
+If you want, I can also add Firestore examples, deploy scripts, or CI steps. Which would you like next?
